@@ -21,24 +21,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/',pacientesRouter);
 
-
-// catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
 app.use(express.static('public'));
 
-// error handler
 app.use((err, req, res, next) => {
-  // Configurar mensagem e erro para renderizar
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // Renderiza a página de erro
   res.status(err.status || 500);
   res.render('error', {
-    title: 'Erro',       // Aqui definimos o título da página de erro
+    title: 'Erro',
     message: err.message,
     error: err
   });
