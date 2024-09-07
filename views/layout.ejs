@@ -10,6 +10,22 @@
     crossorigin="anonymous"
   />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+    h1 {
+    color: rgb(230, 17, 123);
+    padding-top: 30px;
+    font-size: 60px;
+    font-family: 'Playwrite CU', sans-serif;
+    }
+    h2 {
+    color: rgb(239, 132, 185);
+    padding-top: 30px;
+    font-size: 30px;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-style: italic;
+    padding-bottom: 20px;
+    }
     .header-img {
       width: 100%; 
       height: auto; 
@@ -20,7 +36,11 @@
     height: auto; 
     display: block; 
     margin-bottom: 20px; 
-  }
+    }
+    label{
+      color: black;
+      font-size: 70%;
+    }
   </style>
 </head>
 <body>
@@ -28,18 +48,18 @@
     <img src="/img/malias.jpeg" class="header-img" alt="Cabeçalho">
   </header>
   <div class="container">
-    <h1 style="color: rgb(230, 17, 123); padding-top: 30px;"><%= title %></h1>
+    <h1><%= title %></h1>
     <br/><br/>
     <nav class="navbar bg-body-tertiary border-bottom border-body">
       <div class="container-fluid">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-          aria-expanded="false" style="color: rgb(137, 2, 164); font-size:x-large;">Menu Paciente</a>
+          aria-expanded="false" style="color: rgb(137, 2, 164); font-size:xx-large;">Menu Paciente</a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" style="color: rgb(59, 0, 45); font-size: larger;" href="/">Home</a></li>
-          <li><a class="dropdown-item" style="color: rgb(59, 0, 45); font-size: larger;" href="/pacientes">Listar pacientes</a></li>
-          <li><a class="dropdown-item" style="color: rgb(59, 0, 45); font-size: larger;" href="/pacientes/add">Adicionar paciente</a></li>
-          <li><a class="dropdown-item" style="color: rgb(59, 0, 45); font-size: larger;" href="/pacientes/update">Atualizar paciente</a></li>
-          <li><a class="dropdown-item" style="color: rgb(59, 0, 45); font-size: larger;" href="/pacientes/delete">Apagar pacientes</a></li>
+          <li><a class="dropdown-item" style="color: rgb(59, 0, 45); font-size: x-large;" href="/">Home</a></li>
+          <li><a class="dropdown-item" style="color: rgb(59, 0, 45); font-size: x-large;" href="/pacientes">Listar pacientes</a></li>
+          <li><a class="dropdown-item" style="color: rgb(59, 0, 45); font-size: x-large;" href="/pacientes/add">Adicionar paciente</a></li>
+          <li><a class="dropdown-item" style="color: rgb(59, 0, 45); font-size: x-large;" href="/pacientes/update">Atualizar paciente</a></li>
+          <li><a class="dropdown-item" style="color: rgb(59, 0, 45); font-size: x-large;" href="/pacientes/delete">Apagar pacientes</a></li>
         </ul>
       </div>
     </nav>
@@ -48,13 +68,5 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
-    <div class="card" style="width: 18rem;">
-      <img src="/img/scrubs" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-    </div>
-
 </body>
 </html>

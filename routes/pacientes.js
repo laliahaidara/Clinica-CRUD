@@ -18,15 +18,14 @@ router.get('/', (req, res) => {
 
 router.get('/pacientes', async (req, res) => {
   try {
-    const pacientes = await Paciente.findAll(); // Busca todos os pacientes
+    const pacientes = await Paciente.findAll(); 
     res.status(200);
 
-    // Passa para o EJS se a lista está vazia
     res.render('pacientes', {
       title: 'Lista de Pacientes',
       body: 'pacientes',
       pacientes: pacientes,
-      isEmpty: pacientes.length === 0 // Verifica se a lista está vazia
+      isEmpty: pacientes.length === 0 
     });
   } catch (error) {
     res.status(500);
@@ -47,12 +46,12 @@ router.post('/pacientes/add', async (req, res) => {
     if (!cpf.isValid(CPF)) {
       return res.render('addpaciente', {
         title: 'Adicionar Paciente',
-        errorMessage: 'CPF inválido', // Passa a mensagem de erro
-        CPF, Nome, Idade, DiaMarcado, HoraMarcada // Passa os dados preenchidos
+        errorMessage: 'CPF inválido', 
+        CPF, Nome, Idade, DiaMarcado, HoraMarcada 
       });
     }
 
-    // Cria o paciente se o CPF for válido
+    // Cria paciente CPF for válido
     const paciente = await Paciente.create({ CPF, Nome, Idade, DiaMarcado, HoraMarcada });
     res.status(201);
     res.redirect('/pacientes');
@@ -102,7 +101,7 @@ router.get('/pacientes/update/:CPF', async (req, res) => {
 router.post('/pacientes/update', async (req, res) => {
   const { pacienteCPF, Nome, Idade, DiaMarcado, HoraMarcada } = req.body;
 
-  // Valida o CPF
+  // Validar CPF
   if (!cpf.isValid(pacienteCPF)) {
     res.status(400);
     return res.render('error', {
