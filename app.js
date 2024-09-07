@@ -27,6 +27,8 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+app.use(express.static('public'));
+
 // error handler
 app.use((err, req, res, next) => {
   // Configurar mensagem e erro para renderizar

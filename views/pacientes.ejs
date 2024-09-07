@@ -5,7 +5,7 @@
 
   <br><br><br>  <!-- Verificação se a lista de pacientes está vazia -->
   <% if (isEmpty) { %>
-    <div class="alert alert-warning" role="alert">
+    <div class="alert alert-warning" role="alert" style="background-color: #c5a1d7; color: #54009e; border-color: #340050;">
       Não há pacientes cadastrados no momento.
     </div>
   <% } else { %>
@@ -19,9 +19,9 @@
           <th>Hora Marcada</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody style="color: rgb(118, 0, 90); font-size: larger;"> 
         <% pacientes.forEach(function(paciente) { %>
-          <tr>
+          <tr> 
             <td><%= paciente.CPF %></td>
             <td><%= paciente.Nome %></td>
             <td><%= paciente.Idade %></td>
