@@ -1,2 +1,2 @@
 # Clinica-NODE
-Objetivo: Um cadastro baseado no exemplo do repositório. claulis/CRUD at avançado (github.com)  Caso de uso a ser desenvolvido: Paciente de uma clínica médica (marcação consulta). 
+Cadastro baseado no exemplo do repositório. claulis/CRUD at avançado (github.com)  Caso de uso que foi desenvolvido: Marcação de consulta para um paciente em uma clínica médica, utilizando NODE.js e EJS. 
