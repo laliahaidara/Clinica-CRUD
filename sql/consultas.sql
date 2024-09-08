@@ -6,5 +6,5 @@ CREATE TABLE IF NOT EXISTS Paciente (
     Nome varchar(40) NOT NULL,
     Idade INT(11) NOT NULL,
     DiaMarcado date NOT NULL,
-    HoraMarcada time NOT NULL,
+    HoraMarcada time NOT NULL
 );
